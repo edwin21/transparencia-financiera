@@ -1,52 +1,214 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TransparenciaFinanciera</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/TransparenciaFinanciera.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - Transparencia Financiera</title>
+    <link rel="stylesheet" href="~/css/output.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+
+    <style>
+        .gradient {
+            background: linear-gradient(90deg, #DB863D 0%, #BE0322 100%);
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TransparenciaFinanciera</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+<body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+    <!--Nav-->
+    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+            <div class="pl-4 flex items-center">
+                <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+                    href="#">
+                    <svg class="h-6 fill-current inline" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 402.000000 252.000000">
+                        <g transform="translate(0.000000,252.000000) scale(0.100000,-0.100000)">
+                            <path d="M1670 2444 c-118 -40 -294 -96 -390 -124 -302 -88 -373 -111 -445
+-147 -113 -57 -223 -133 -329 -229 -152 -136 -192 -170 -255 -214 -114 -80
+-188 -227 -226 -445 -18 -105 -20 -372 -5 -820 5 -159 10 -327 10 -372 l0 -83
+231 0 230 0 -8 288 c-11 409 -9 533 12 627 58 266 212 435 783 864 112 84 212
+161 223 172 23 23 26 91 5 108 -16 13 -226 -87 -442 -211 -193 -112 -193 -112
+-220 -99 -38 17 -30 48 22 80 71 45 639 330 829 416 94 42 183 89 198 103 34
+32 57 73 57 102 0 23 -34 61 -52 58 -7 0 -110 -34 -228 -74z" />
+                            <path d="M2101 2501 c-25 -25 -26 -52 -5 -96 22 -47 63 -72 269 -165 190 -86
+730 -357 803 -403 46 -30 55 -59 22 -77 -28 -15 -44 -9 -163 62 -172 103 -465
+250 -489 246 -17 -2 -24 -11 -26 -32 -7 -58 5 -71 185 -206 415 -311 668 -536
+742 -662 112 -191 124 -286 107 -855 l-8 -303 221 0 c122 0 224 -1 229 -2 8
+-3 16 216 27 757 9 423 4 496 -41 653 -45 157 -111 255 -219 328 -27 18 -113
+91 -190 160 -147 132 -254 209 -370 267 -81 40 -131 56 -390 131 -104 30 -296
+90 -425 133 -129 43 -240 79 -247 81 -6 2 -21 -6 -32 -17z" />
+                            <path d="M1185 1615 c-191 -103 -130 -385 84 -385 27 0 52 -4 56 -9 3 -5 -111
+-136 -252 -291 -142 -155 -263 -292 -270 -303 -17 -30 -16 -92 1 -126 8 -15
+31 -42 51 -60 28 -25 45 -31 80 -31 46 0 62 10 181 114 44 40 57 47 65 35 5
+-8 9 -102 9 -209 0 -168 3 -201 19 -236 34 -74 103 -109 202 -102 63 5 97 23
+133 72 20 26 21 46 28 309 7 322 17 401 75 597 44 150 108 253 227 372 69 69
+76 79 76 115 0 71 -63 140 -138 150 -60 8 -93 -10 -163 -89 -64 -72 -132 -128
+-155 -128 -7 0 -17 23 -24 53 -22 105 -84 160 -189 165 -47 2 -75 -2 -96 -13z" />
+                            <path d="M2159 1607 c-48 -32 -79 -83 -79 -129 0 -36 8 -48 88 -131 140 -146
+205 -276 251 -504 31 -155 42 -282 40 -498 -1 -209 4 -240 44 -284 61 -67 207
+-68 281 -3 10 9 27 35 37 57 16 35 19 67 19 242 0 129 4 204 10 208 6 4 40
+-20 76 -52 98 -88 122 -103 166 -103 47 0 82 21 119 74 32 43 38 103 16 142
+-7 12 -128 148 -270 303 -142 155 -255 286 -252 291 3 6 29 10 56 10 111 0
+199 88 199 200 0 113 -88 200 -201 200 -103 0 -176 -60 -202 -166 -19 -76 -34
+-71 -146 44 -53 54 -107 104 -118 111 -36 18 -97 13 -134 -12z" />
+                            <path d="M1935 1221 c-133 -62 -165 -223 -64 -324 63 -63 58 -67 -89 -67 -151
+0 -165 -7 -165 -85 0 -54 25 -87 81 -103 20 -6 53 -24 72 -41 l35 -29 5 -215
+5 -215 30 -44 c42 -59 96 -88 165 -88 97 0 169 51 199 139 7 21 11 108 11 224
+l0 190 35 33 c20 18 54 39 76 46 54 16 79 49 79 104 0 75 -17 84 -164 84 -69
+0 -127 4 -131 9 -3 6 14 29 37 53 41 40 68 99 68 144 0 141 -159 244 -285 185z" />
+                        </g>
+                    </svg>
+                    Isssteson
+                </a>
+            </div>
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle"
+                    class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </div>
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+                id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                            href="#">link</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                            href="#">link</a>
+                    </li>
+                </ul>
+                <button id="navAction"
+                    class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    Action
+                </button>
+            </div>
+        </div>
+        <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+    </nav>
+
+
+
+    <!--RENDER BODY-->
+
+    @RenderBody()
+
+    <!--Footer-->
+    <footer class="bg-white">
+        <div class="container mx-auto px-8">
+            <div class="w-full flex flex-col md:flex-row py-6">
+                <div class="flex-1 mb-6 text-black">
+                    <a class="text-rojo no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+                        <svg class="h-6 fill-current inline" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 402.000000 252.000000">
+                            <g transform="translate(0.000000,252.000000) scale(0.100000,-0.100000)">
+                                <path d="M1670 2444 c-118 -40 -294 -96 -390 -124 -302 -88 -373 -111 -445
+-147 -113 -57 -223 -133 -329 -229 -152 -136 -192 -170 -255 -214 -114 -80
+-188 -227 -226 -445 -18 -105 -20 -372 -5 -820 5 -159 10 -327 10 -372 l0 -83
+231 0 230 0 -8 288 c-11 409 -9 533 12 627 58 266 212 435 783 864 112 84 212
+161 223 172 23 23 26 91 5 108 -16 13 -226 -87 -442 -211 -193 -112 -193 -112
+-220 -99 -38 17 -30 48 22 80 71 45 639 330 829 416 94 42 183 89 198 103 34
+32 57 73 57 102 0 23 -34 61 -52 58 -7 0 -110 -34 -228 -74z" />
+                                <path d="M2101 2501 c-25 -25 -26 -52 -5 -96 22 -47 63 -72 269 -165 190 -86
+730 -357 803 -403 46 -30 55 -59 22 -77 -28 -15 -44 -9 -163 62 -172 103 -465
+250 -489 246 -17 -2 -24 -11 -26 -32 -7 -58 5 -71 185 -206 415 -311 668 -536
+742 -662 112 -191 124 -286 107 -855 l-8 -303 221 0 c122 0 224 -1 229 -2 8
+-3 16 216 27 757 9 423 4 496 -41 653 -45 157 -111 255 -219 328 -27 18 -113
+91 -190 160 -147 132 -254 209 -370 267 -81 40 -131 56 -390 131 -104 30 -296
+90 -425 133 -129 43 -240 79 -247 81 -6 2 -21 -6 -32 -17z" />
+                                <path d="M1185 1615 c-191 -103 -130 -385 84 -385 27 0 52 -4 56 -9 3 -5 -111
+-136 -252 -291 -142 -155 -263 -292 -270 -303 -17 -30 -16 -92 1 -126 8 -15
+31 -42 51 -60 28 -25 45 -31 80 -31 46 0 62 10 181 114 44 40 57 47 65 35 5
+-8 9 -102 9 -209 0 -168 3 -201 19 -236 34 -74 103 -109 202 -102 63 5 97 23
+133 72 20 26 21 46 28 309 7 322 17 401 75 597 44 150 108 253 227 372 69 69
+76 79 76 115 0 71 -63 140 -138 150 -60 8 -93 -10 -163 -89 -64 -72 -132 -128
+-155 -128 -7 0 -17 23 -24 53 -22 105 -84 160 -189 165 -47 2 -75 -2 -96 -13z" />
+                                <path d="M2159 1607 c-48 -32 -79 -83 -79 -129 0 -36 8 -48 88 -131 140 -146
+205 -276 251 -504 31 -155 42 -282 40 -498 -1 -209 4 -240 44 -284 61 -67 207
+-68 281 -3 10 9 27 35 37 57 16 35 19 67 19 242 0 129 4 204 10 208 6 4 40
+-20 76 -52 98 -88 122 -103 166 -103 47 0 82 21 119 74 32 43 38 103 16 142
+-7 12 -128 148 -270 303 -142 155 -255 286 -252 291 3 6 29 10 56 10 111 0
+199 88 199 200 0 113 -88 200 -201 200 -103 0 -176 -60 -202 -166 -19 -76 -34
+-71 -146 44 -53 54 -107 104 -118 111 -36 18 -97 13 -134 -12z" />
+                                <path d="M1935 1221 c-133 -62 -165 -223 -64 -324 63 -63 58 -67 -89 -67 -151
+0 -165 -7 -165 -85 0 -54 25 -87 81 -103 20 -6 53 -24 72 -41 l35 -29 5 -215
+5 -215 30 -44 c42 -59 96 -88 165 -88 97 0 169 51 199 139 7 21 11 108 11 224
+l0 190 35 33 c20 18 54 39 76 46 54 16 79 49 79 104 0 75 -17 84 -164 84 -69
+0 -127 4 -131 9 -3 6 14 29 37 53 41 40 68 99 68 144 0 141 -159 244 -285 185z" />
+                            </g>
+                        </svg>
+                        ISSSTESON
+                    </a>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase text-gray-500 md:mb-6">Links</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-rojo">FAQ</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Egresos"
-                                asp-action="Index">Egresos</a>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-rojo">Help</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-rojo">Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase text-gray-500 md:mb-6">Legal</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-rojo">Terms</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-rojo">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase text-gray-500 md:mb-6">Social</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-rojo">Facebook</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-rojo">Linkedin</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-rojo">Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase text-gray-500 md:mb-6">Company</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-rojo">Official
+                                Blog</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-rojo">About
+                                Us</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#" class="no-underline hover:underline text-gray-800 hover:text-rojo">Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - TransparenciaFinanciera - <a asp-area="" asp-controller="Home"
-                asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

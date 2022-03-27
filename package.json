@@ -1,0 +1,14 @@
+{
+  "name": "transparencia-financiera",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:hyeomans/transparencia-financiera.git",
+  "author": "open-source@isssteson.gob.mx",
+  "license": "MIT",
+  "scripts": {
+    "build:css": "tailwindcss -i ./wwwroot/css/site.css -o ./wwwroot/css/output.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.0.23"
+  }
+}
