@@ -1,0 +1,34 @@
+﻿@model TransparenciaFinanciera.DTO.IngresosComparativo
+
+@{
+    ViewData["Title"] = "_Grafica";
+}
+
+<h1>DATOS.</h1>
+
+<p>
+   Aqui se cargara la grafica.
+   NOTA: Buscar una libreria que las genere en el backend.  
+</p>
+<h1>Dependencia: @Model.dependencia</h1>
+<h2>Mes: @Model.mes</h2>
+
+<table class="table">
+<thead>
+    <tr>
+        <th>Ingreseo programado</th>
+        <th>Ingreseo real</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>
+             @Model.ingresoProgramado.ToString("C2")
+        </td>
+        <td>
+             @Model.ingresoReal.ToString("C2")
+        </td>
+    </tr>
+</tbody>
+</table>
+ 

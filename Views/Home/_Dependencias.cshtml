@@ -1,0 +1,35 @@
+﻿@model IEnumerable<TransparenciaFinanciera.DTO.IngresosComparativo>
+
+@{
+    ViewData["Title"] = "_Dependencias";
+}
+
+<h1>Dependencias</h1>
+
+ 
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.dependencia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.dependencia)
+            </td>
+            <td>
+                 <button hx-get="/home/CargarGrafica?_dependencia=@item.dependencia"  hx-target="#grafica"   hx-swap="innerHTML" class="btn btn-primary">
+                    Cargar grafica
+                    </button>
+            
+             
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -6,3 +6,69 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<div class="row">
+
+    <div class ="col-md-12">
+           <button hx-get="/home/ejemplo" hx-target="#ejemplo"   hx-swap="innerHTML" class="btn btn-primary">
+    Cargar egresos
+    </button>
+    </div>
+    <div class="col-md-12" id="ejemplo">
+
+    </div>
+</div>
+
+<div class="row">
+
+    <div class ="col-md-12">
+           <button hx-get="/home/CargarDependencias" hx-target="#dependencias"   hx-swap="innerHTML" class="btn btn-primary">
+    Cargar dependencias
+    </button>
+    </div>
+    <div class="col-md-4" id="dependencias">
+
+    </div>
+       <div class="col-md-8" id="grafica">
+
+    </div>
+</div>
+<div class="row">
+      
+ 
+       <div class="col-md-12" id="fusionChart">
+            <div>@Html.Raw(ViewData["Datos"])</div> 
+    </div>
+</div>
+
+<div class="row">
+    <div class ="col-md-12">
+           <button id="btnCargarGrafica"  class="btn btn-primary">
+    Cargar grafica
+    </button>
+    </div>
+    <div class="col-md-12" id="grafica">
+     <canvas id="myChart" width="400" height="400"></canvas>
+
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        await Html.RenderPartialAsync("_HtmxJs");
+        await Html.RenderPartialAsync("_ChartJs"); 
+    }
+    <script type="text/javascript">
+        $("#btnCargarGrafica").on("click", function(){
+            const ctx = document.getElementById('myChart');
+            CargarGrafica(ctx);
+
+        } )
+    </script>
+
+      
+}

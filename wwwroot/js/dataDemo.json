@@ -1,0 +1,43 @@
+[
+  {
+
+    "dependencia": "Dependencia 1",
+    "mes": "Enero",
+    "ingresoProgramado": 5000,
+    "ingresoReal": 250
+
+  },
+  {
+
+    "dependencia": "Dependencia 2",
+    "mes": "Enero",
+    "ingresoProgramado": 4000,
+    "ingresoReal": 550
+
+  },
+  {
+
+    "dependencia": "Dependencia 3",
+    "mes": "Enero",
+    "ingresoProgramado": 8000,
+    "ingresoReal": 6987
+
+  },
+  {
+
+    "dependencia": "Dependencia 4",
+    "mes": "Enero",
+    "ingresoProgramado": 3589,
+    "ingresoReal": 654
+
+  },
+  {
+
+    "dependencia": "Dependencia 5",
+    "mes": "Enero",
+    "ingresoProgramado": 8579,
+    "ingresoReal": 5896
+
+  }
+
+]
