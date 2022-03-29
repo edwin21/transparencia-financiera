@@ -43,6 +43,7 @@ public class HomeController : Controller
     {
         var data = LoadJson();
         var dependencia = data.FirstOrDefault(a => a.dependencia == _dependencia);
+        ViewData["Datos"] = GenerarGraficaDependencia(dependencia);//  GetData();
         return PartialView("_Grafica", dependencia);
     }
 
@@ -118,6 +119,47 @@ public class HomeController : Controller
         column.ThemeName = FusionChartsTheme.ThemeName.FUSION;
         // set chart rendering json
         return  column.Render();
+    }
+    public string GenerarGraficaDependencia(DTO.IngresosComparativo info)
+    {
+
+        // create data table to store data
+        DataTable ChartData = new DataTable();
+        // Add columns to data table
+        ChartData.Columns.Add("Ingreso programdo e ingreso real", typeof(System.String));
+        ChartData.Columns.Add("Dinero", typeof(System.Double));
+        // Add rows to data table
+
+        ChartData.Rows.Add("Ingreso programado", info.ingresoProgramado);
+        ChartData.Rows.Add("Ingreso real", info.ingresoReal);
+ 
+        // Create static source with this data table
+        StaticSource source = new StaticSource(ChartData);
+        // Create instance of DataModel class
+        DataModel model = new DataModel();
+        // Add DataSource to the DataModel
+        model.DataSources.Add(source);
+        // Instantiate Column Chart
+        Charts.ColumnChart column = new Charts.ColumnChart("first_chart");
+        // Set Chart's width and height
+        column.Width.Pixel(700);
+        column.Height.Pixel(400);
+        // Set DataModel instance as the data source of the chart
+        column.Data.Source = model;
+        // Set Chart Title
+        column.Caption.Text = "Ingreso programdo e ingreso real";
+        // Set chart sub title
+        column.SubCaption.Text = info.mes;//"2017-2018";
+        // hide chart Legend
+        column.Legend.Show = false;
+        // set XAxis Text
+        column.XAxis.Text = "Ingresos";
+        // Set YAxis title
+        column.YAxis.Text = "Dinero";
+        // set chart theme
+        column.ThemeName = FusionChartsTheme.ThemeName.FUSION;
+        // set chart rendering json
+        return column.Render();
     }
 
 }
